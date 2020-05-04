@@ -11,6 +11,20 @@ public class Artist {
     private List<String> members;//乐队成员
     private String origin;//乐队来自哪里
 
+    public Artist(String name, List<String> members, String origin) {
+        this.name = name;
+        this.members = members;
+        this.origin = origin;
+    }
+
+    // isFrom方法
+    public boolean isFrom(String city){
+        if (this.getOrigin().equals(city)) {
+            return true;
+        }
+        return false;
+    }
+
     public String getName() {
         return name;
     }
